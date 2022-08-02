@@ -18,6 +18,7 @@ class Produto:
 
     def get_content(self):
         self.content = self.response.content
+        print(self.content)
         return self.content
 
     def get_offers(self):
@@ -32,7 +33,8 @@ class Produto:
             discount = offer.find(
                 'span', attrs={'ui-search-price__second-line__label'})
          
-            NameList.append([name.text, price.text,discount.text,links['href']])
+            if (discount): 
+                NameList.append([name.text, price.text,discount.text,links['href']])
         self.ofertas = NameList
         return self.ofertas
 
