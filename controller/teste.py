@@ -1,10 +1,19 @@
+from pandas.testing import assert_frame_equal
 import pandas as pd
+import requests
 import unittest
 from model.product import Produto
 from app import app
 
 
 class TestProduct(unittest.TestCase):
+
+    def setUp(self):
+        self.response = requests.get('https://lista.mercadolivre.com.br/livros')
+        self.content = self.response.content
+        self.assert_frame_equal = assert_frame_equal
+        self.ofertas = Produto.get_offers(self)
+
     def testHtmlFlaskIndex(self):
         application = app.test_client()
         response = application.get('/')
@@ -31,22 +40,18 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(answer.status_code, 200)
 
     def testContent(self):
-        produtotest = Produto('miband')
-        answer = produtotest.get_response()
-        conteudo = answer.get_content()
-        print(conteudo)
-        
-
-        # eu n lembro o que vem em conteudo, checar isso ai pra fazer o test
+        Produto.get_content(self)
+        self.assertTrue('text/html',Produto.get_content(self))
 
     def testOffers(self):
-        # produtotest = Produto('cafe')
-        # ofertinha = produtotest.get_offers()
-        # self.assertIn('text/html', ofertinha)
-        pass
+        Produto.get_offers(self)
+        self.assertTrue(len(Produto.get_offers(self))>0)
 
     def testDataframe(self):
-     pass
+     Produto.get_dataframe(self)
+     controle = pd.DataFrame({'a':[],'b':[],'c':[],'d':[]})
+     self.assert_frame_equal(controle,Produto.get_dataframe(self))
+    
 
 
 if __name__ == '__main__':

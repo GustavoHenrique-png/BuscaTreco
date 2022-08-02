@@ -18,7 +18,6 @@ class Produto:
 
     def get_content(self):
         self.content = self.response.content
-        print(self.content)
         return self.content
 
     def get_offers(self):
