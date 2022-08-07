@@ -22,7 +22,7 @@ class Produto:
 
     def get_offers(self):
         NameList = []
-        mercadoLivre = BeautifulSoup(self.content, 'html.parser')#aqui ta o erro ó
+        mercadoLivre = BeautifulSoup(self.content, 'html.parser')
         offers = mercadoLivre.find_all(
         'div', attrs={'class': 'ui-search-result__wrapper'})
         for offer in offers:
