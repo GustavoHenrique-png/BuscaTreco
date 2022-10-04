@@ -14,7 +14,7 @@
 <hr>
 
 ### Ambiente
-* Para que o projeto funcione corretamente em sua máquina é necessário a instalação de algumas bibliotecas sendo elas:<br>
+* Para que o projeto funcione corretamente basta rodar a venv (virtual enviroment), caso não funcione, as bibliotecas a serem instaladas são:<br>
   • Python (linguagem principal)<br>
   • Pip (instalador de pacotes do python)<br>
   • Beatifullsoup (instalado via comando: pip install beautifulsoup4)<br>
