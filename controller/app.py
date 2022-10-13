@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 # sys.path.append('../model')
 from model.product import Produto
 # instância da classe flask
-app = Flask(__name__, template_folder='../template')
+app = Flask(__name__, template_folder='../template',static_folder='../static')
 
 
 @app.route('/', methods=['GET', 'POST'])
