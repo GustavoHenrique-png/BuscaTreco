@@ -23,7 +23,7 @@ def product():
     novo_produto.get_content()
     novo_produto.get_offers()
     novo_produto.get_dataframe()
-    return render_template('produto.html', tables=[novo_produto.dataframe.to_html(classes='data', header=True)])
+    return render_template('produto.html', tables=[novo_produto.dataframe.to_html(classes='data', header=True,index=False)])
 
 
 # Checando se o usuário está acessando o programa principal

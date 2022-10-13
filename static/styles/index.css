@@ -1,75 +1,74 @@
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
-form{
-    background: transparent;
+form {
+  background: transparent;
 }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    /*background-color: linear-gradient(#000000,#434343);*/
-    background:linear-gradient(#000000,#434343);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /*background-color: linear-gradient(#000000,#434343);*/
+  background: linear-gradient(#000000, #434343);
 }
-.loginbox{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.5);
-    box-sizing:border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,0,0,0.6);
-    border-radius:10px;
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0, 0, 0.6);
+  border-radius: 10px;
 }
-.loginbox h2{
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
-.loginbox .jorginho{
-    position: relative;
+.box .jorginho {
+  position: relative;
 }
-.loginbox .jorginho input{
-   width: 100%;
-   padding: 10px 0;
-   font-size: 16px;
-   color: #fff;
-   border: none;
-   border-bottom: 1px solid #fff;
-   outline: none;
-   background: transparent;
+.box .jorginho input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
 }
-.loginbox .jorginho label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: 0.5s;
+.box .jorginho label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
 }
-.loginbox .jorginho input:focus ~label,
-.loginbox .jorginho input:valid ~label {
-    top:-20px;
-    left: 0;
-    color: #ff0043;
-    font-size:12px;
+.box .jorginho input:focus ~ label,
+.box .jorginho input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ff0043;
+  font-size: 12px;
 }
-
-.botao{
-    color:#fff;
-	background-color:#e74c3c;
-	outline: none;
-    border: 0;
-    color: #fff;
-	padding:10px 20px;
-	text-transform:uppercase;
-	margin-top:50px;
-	border-radius:2px;
-	cursor:pointer;
-	position:relative;
+.botao {
+  color: #fff;
+  background-color: #e74c3c;
+  outline: none;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
 }
