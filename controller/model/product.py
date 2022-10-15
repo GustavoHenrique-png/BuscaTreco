@@ -31,12 +31,11 @@ class Produto:
             name = offer.find('h2', attrs={'ui-search-item__title'})
             discount = offer.find(
                 'span', attrs={'ui-search-price__second-line__label'})
-         
-            if (discount): 
+            if discount: 
                 NameList.append([name.text, price.text,discount.text,links['href']])
         self.ofertas = NameList
         return self.ofertas
 
     def get_dataframe(self):
-        self.dataframe = pd.DataFrame(data=self.ofertas, columns=['name', 'price','discount', 'links'])
+        self.dataframe = pd.DataFrame(data=self.ofertas, columns=['Name', 'Price','Discount', 'Links'])
         return self.dataframe
